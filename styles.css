@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+  background-color: #f0f0f0;  /* Более мягкий фон для уменьшения нагрузки на глаза */
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  cursor: pointer;
+}
+
+#menu {
+  position: relative;
+  list-style-type: none;
+  padding-left: 5px;
+  z-index: 1000;
+  display: inline-block;
+  text-align: center;
+}
+
+#menu li {
+  margin: 2px;
+  padding: 8px 12px;  /* немного увеличенный отступ для лучшего взаимодействия */
+  border-radius: 8px;  /* Более мягкие углы */
+  background-color: #ffd700;  /* Теплый золотой цвет */
+  color: #333;  /* Более темный цвет текста для лучшей читаемости */
+  font-weight: bold;  /* Сделать элементы меню более заметными */
+  transition: background-color 0.3s, transform 0.2s;  /* Плавные эффекты перехода */
+}
+
+#menu li:hover {
+  background-color: #0066cc;  /* Контрастный синий цвет для состояния наведения */
+  color: #fff;  /* Изменение цвета текста при наведении для читаемости */
+  transform: scale(1.05);  /* Небольшое увеличение при наведении для акцента */
+}
+
+#forPuzzle {
+  position: absolute;
+  width: 95vw;
+  height: 95vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fffbcc;  /* Мягкий фон для области головоломки */
+  overflow: hidden;
+  border: 2px solid #ccc;  /* Добавить рамку для определения границ */
+  border-radius: 10px;  /* Немного закругленные углы для области головоломки */
+}
+
+.polypiece {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+}
+
+.moving {
+  transition-property: top, left;
+  transition-duration: 0.5s;  /* Более быстрое движение для более отзывчивого ощущения */
+  transition-timing-function: ease;  /* Облегченная функция времени для плавных переходов */
+}
+
+.gameCanvas {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+}
